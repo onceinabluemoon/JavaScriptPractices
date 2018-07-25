@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- 	<script src="script.js"></script>			-->
+
+	<title>Javascript Basics</title>
+
+	<style>
+		.header{ text-align: center; font-family: sans-serif; font-size: 18px; background: hotpink; color: red;}
+		.container{ text-align: center; font-size: 30px;}
+	</style>
+
+</head>
+<body>
+
+	<div class="header">
+		<h1>Beginning of Javascript</h1>
+	</div>
+	
+	<hr>
+	<div class="container">
+
+	</div>
+
+	<script>
+/*
+	var num1 = 13;
+	var num2 = 17;
+	var num3 = 19;
+	var sum = num1 + num2 + num3 ;
+	alert("sum : " + sum);
+	
+	var s1 = "Javascript ";
+	var s2 = "Programming ";
+	var s3 = "Language";
+	alert( s1 + s2 + s3 );
+*/
+
+
+/*
+	var a;
+	a = 23;
+	var b = 8 * a + 1502;
+	alert("b : " + b);
+*/
+
+		
+/*
+	// Arrays
+	var arr = ["Java", "Android", "MySql", "Python", "Selenium", "Html", "Css", "Javascript", "Accumark"];
+	alert(arr[3] + " & " + arr[0] );
+	
+	arr[9]="MatLab";
+	arr.push("Ruby");
+	alert("["+ arr +"]" +" : "+ arr.length);
+*/
+
+
+/*
+	// For
+	for (var i = 0; i < 2; i++) 
+	{
+		console.log("i : "+i);
+	}
+*/
+
+
+/*
+	// While
+	var j = 0;
+	while( j<12 )
+	{
+		console.log("j : "+j);
+		j+=3;
+	}
+*/
+
+
+/*
+	// forEach()
+	var fibs = [1,1,2,3,5,8,13,21,34,55];
+	console.log("Fibs : " + fibs);
+
+	for(var i=0; i<fibs.length; i++)
+	{
+		console.log(fibs[i]);
+	}
+
+
+	console.log("\n");
+	fibs.forEach(function(fib)
+	{
+		console.log(fib);
+	})
+*/
+
+
+
+/*
+	var x = 91, y = 17;
+	if (x == y) { console.log("eşit"); }
+	else if ( x<y) { console.log("ilki küçük"); }
+	else { console.log("ilki büyük"); }
+
+
+
+	if( 11 == "11")	{ console.log("Eşit - 2equal"); }
+
+	// hem deger hem veri tipi kontrolü
+	if( 11 === "11")	{ console.log("eşit - 3equal"); }
+
+		
+	// and op.
+	if (0 != 1 && "s" == "s" ) { console.log("&& worked!") };
+
+	// or op.
+	if (0 == 0 || "s" == "n" ) { console.log("|| worked!") };
+
+	// not op.
+	if ( ! ("s" == "n") ) { console.log("! worked!") };
+
+
+	// Switch Case
+	var c = 2;
+	switch(c)
+	{
+		case 2:
+			console.log(" case 2");
+			break;
+		case 4:
+			console.log(" case 4");
+			break;
+		default:
+			console("default");
+	}
+*/
+
+
+
+	// functions
+	function insahe(name)
+	{
+		console.log("Hola " + name + "~");
+	}
+
+	insahe("Esra");
+
+
+
+	function facto(num)
+	{
+		var carpim = 1 ; // initialize
+		for (var i = 1; i <= num; i++) 
+		{
+			carpim *= i;
+		};
+		console.log(num + "! = " + carpim);
+	}
+	facto(3);
+	facto(6);
+
+
+
+	function getSum(t , k )
+	{
+		return t + k ;
+	}
+	var toplam = getSum(3, 88);
+	console.log(toplam);
+
+
+
+	</script>
+</body>
+</html>

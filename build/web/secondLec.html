@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- 	<script src="script.js"></script>			-->
+
+	<title>Javascript</title>
+
+	<style>
+		.header{ text-align: center; font-family: sans-serif; font-size: 18px; background: hotpink; color: red;}
+		.container{ text-align: center; font-size: 30px;}
+		button{ background-color: crimson; color: lavenderblush; padding: 25px; padding-top: 10px; padding-bottom: 10px; 
+				border-radius: 10px; font-weight: bolder; }
+	</style>
+
+</head>
+<body>
+
+	<div class="header">
+		<h1>Javascript secondlec</h1>
+	</div>
+	
+	<hr>
+	<div class="container">
+		<p id="p1"> Paragraph1 </p>
+		
+		<button onclick = "go()"> Go! </button>
+		<button onclick = "cl(this)"> Click </button>
+		<button onclick = "styleBold()"> Font-weight </button>
+		<button onclick = "colorChocolate()"> Color </button>
+		<button onmouseover = "mouseOver()" onmouseout = "mouseOut()"> Mouse over-out </button>
+
+		<form name= "form1" action = "request.jsp" method = "POST" onsubmit = "return confirm();" >
+			<input type = "text" name = "nm" placeholder = "Name"/>
+			<button type = "submit" >Go</button>
+
+		</form>
+
+	</div>
+
+	<script>
+/*
+	// Objects
+	var person = {
+		name : "Maryam",
+		surname : "Mirzakhani",
+		lang : ["Go", "C"],
+		nameInfo : function(){
+			return "Name : " + this.name + " Surname : " + this.surname ;
+		}
+
+	};
+
+	console.log(person.name + "	" + person.surname);
+	console.log(person.lang);
+	console.log(person.nameInfo() );
+
+
+
+	var per = new Object();
+	per.name = "Fermat";
+	per.no = 182009;
+	per.noInfo = function(){
+		return "No : " + per.no;
+	};
+	
+	console.log(per.name);
+	console.log( per.noInfo() );
+
+
+
+	// Constructor Pattern
+	function Citizen(name, surname, no){
+		this.name = name;
+		this.surname = surname;
+		this.no = no;
+		this.citizenInfo = function(){
+			return "Name : " + this.name + "\nSurname : " + this.surname + "\nCitizen No : " + this.no;
+
+		}
+	}
+
+	var ctzn1 = new Citizen("Sena","Park",15703);
+	var ctzn2 = new Citizen("Lily", "Gosling", 25003);
+	console.log(ctzn1);
+	console.log(ctzn2.citizenInfo() );
+*/
+
+
+
+	// Events
+	function go(){
+		alert("Go button clicked.");
+	}
+
+	function cl(element){
+		element.innerHTML = "Clicked!" ;
+	}
+
+	function styleBold(){
+		var p1 = document.getElementById("p1");
+		p1.style.fontWeight = "bold";
+	}
+
+	function colorChocolate(){
+		var p1 = document.getElementById("p1");
+		p1.style.color = "chocolate";
+	}	
+
+	function mouseOver(){
+		var p1 = document.getElementById("p1");
+		p1.innerHTML = "Mouse Over";
+	}
+
+	function mouseOut(){
+		var p1 = document.getElementById("p1");
+		p1.innerHTML = "Mouse Out";
+	}
+
+
+	function confirm(){
+		var form1 = document.forms["form1"];
+		var value = form1["nm"].value;
+
+		if(value==""){
+			alert("İsim alanı boş bırakılamaz!");
+			return false;
+		}
+		else return true;
+	}
+
+
+
+	</script>
+</body>
+</html>
